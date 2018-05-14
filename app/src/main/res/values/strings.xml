@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AndroidUI</string>
     <string name="recyclerview">RecyclerView</string>
+    <string name="material_design">Material Design</string>
 </resources>

@@ -1,11 +1,10 @@
-package com.wangshuai.androidui.recyclerview;
+package com.wangshuai.androidui.material;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
