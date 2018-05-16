@@ -19,6 +19,10 @@
         <activity android:name=".material.RecyclerViewActivity"/>
         <activity android:name=".material.MaterialDesignActivity">
         </activity>
+        <activity android:name=".material.PaletteActivity">
+        </activity>
+        <activity android:name=".material.TabLayoutActivity">
+        </activity>
     </application>
 
 </manifest>

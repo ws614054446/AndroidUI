@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wangshuai.androidui.material.PaletteActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_palette"/>
+        <TextView
+            android:id="@+id/tv_trans_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/palette_title_text"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_vibrant"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/vibrant"/>
+    <TextView
+        android:id="@+id/tv_vibrant_dark"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/virbrant_dark"/>
+    <TextView
+        android:id="@+id/tv_vibrant_light"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/virbrant_light"/>
+
+    <TextView
+        android:id="@+id/tv_muted"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/muted"/>
+    <TextView
+        android:id="@+id/tv_muted_dark"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/muted_dark"/>
+    <TextView
+        android:id="@+id/tv_muted_light"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/muted_light"/>
+
+</LinearLayout>

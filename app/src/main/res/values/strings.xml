@@ -2,4 +2,16 @@
     <string name="app_name">AndroidUI</string>
     <string name="recyclerview">RecyclerView</string>
     <string name="material_design">Material Design</string>
+    <string name="palette">Palette</string>
+    <string name="vibrant">vibrant</string>
+    <string name="virbrant_dark">virbrant dark</string>
+    <string name="virbrant_light">virbrant light</string>
+    <string name="muted">muted</string>
+    <string name="muted_dark">muted dark</string>
+    <string name="muted_light">muted light</string>
+    <string name="palette_title_text">带颜色透明标题栏</string>
+    <string name="tablayout">tablayout</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
