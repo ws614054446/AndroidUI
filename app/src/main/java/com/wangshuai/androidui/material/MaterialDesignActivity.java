@@ -10,9 +10,6 @@ import android.widget.TextView;
 import com.wangshuai.androidui.R;
 
 public class MaterialDesignActivity extends AppCompatActivity implements View.OnClickListener {
-    private AppCompatButton btnRecyclerView;
-    private AppCompatButton btnPalette;
-    private AppCompatButton btnTablayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +20,14 @@ public class MaterialDesignActivity extends AppCompatActivity implements View.On
     }
 
     private void initViews() {
-        btnRecyclerView = (AppCompatButton) findViewById(R.id.btn_recyclerview);
+        AppCompatButton btnRecyclerView = (AppCompatButton) findViewById(R.id.btn_recyclerview);
         btnRecyclerView.setOnClickListener(this);
-        btnPalette = (AppCompatButton) findViewById(R.id.btn_palette);
+        AppCompatButton btnPalette = (AppCompatButton) findViewById(R.id.btn_palette);
         btnPalette.setOnClickListener(this);
-        btnTablayout = (AppCompatButton) findViewById(R.id.btn_tablayout);
+        AppCompatButton btnTablayout = (AppCompatButton) findViewById(R.id.btn_tablayout);
         btnTablayout.setOnClickListener(this);
+        AppCompatButton btnTranslucent = (AppCompatButton) findViewById(R.id.btn_translucent);
+        btnTranslucent.setOnClickListener(this);
     }
 
     @Override
@@ -41,6 +40,10 @@ public class MaterialDesignActivity extends AppCompatActivity implements View.On
                 startActivity(new Intent(MaterialDesignActivity.this, PaletteActivity.class));
                 break;
             case R.id.btn_tablayout://tablayout
+                startActivity(new Intent(MaterialDesignActivity.this, TabLayoutActivity.class));
+                break;
+            case R.id.btn_translucent://沉浸式状态栏
+                startActivity(new Intent(MaterialDesignActivity.this, TranslucentActivity.class));
                 break;
         }
     }

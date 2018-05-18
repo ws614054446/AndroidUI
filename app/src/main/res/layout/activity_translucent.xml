@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wangshuai.androidui.material.TranslucentActivity">
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:fitsSystemWindows="true"-->
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:title="沉浸式状态栏"
+        app:titleTextColor="#fff"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff3334">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_drawlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="侧滑页面"/>
+
+    </LinearLayout>
+
+</LinearLayout>

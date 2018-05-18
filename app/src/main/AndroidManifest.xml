@@ -21,7 +21,18 @@
         </activity>
         <activity android:name=".material.PaletteActivity">
         </activity>
-        <activity android:name=".material.TabLayoutActivity">
+        <activity
+            android:name=".material.TabLayoutActivity"
+            android:theme="@style/NoTitleTheme">
+        </activity>
+        <activity
+            android:name=".material.TranslucentActivity"
+            android:theme="@style/NoTitleTheme">
+        </activity>
+        <activity
+            android:name=".material.DrawLayoutActivity"
+            android:label="@string/title_activity_draw_layout"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 

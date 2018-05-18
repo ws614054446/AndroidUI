@@ -25,5 +25,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/tablayout"/>
-
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_translucent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/translucent"/>
 </LinearLayout>
