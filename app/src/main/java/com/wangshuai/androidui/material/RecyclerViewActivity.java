@@ -29,7 +29,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     private void initData() {
         for (int i = 0; i < 50;i++){
-            dataList.add(String.valueOf(i));
+            dataList.add("测试数据-"+String.valueOf(i));
         }
     }
 

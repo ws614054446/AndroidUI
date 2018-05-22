@@ -27,6 +27,8 @@ palette可以从图像中提取的颜色：
 ```
 同时也支持Palette.Builder方式构建
 
+![](https://github.com/ws614054446/AndroidUI/blob/master/imgs/palette.png)
+
 #### Palette.Swatch
 从palette可以获取到google推荐的颜色样本
 
@@ -87,7 +89,7 @@ To use the target, use the addTarget(Target) API when building a Palette。
 #### Target.Builder
 对应上面都有set方法
 
-[示例代码](https://github.com/ws614054446/AndroidUI)
+[Github示例代码,欢迎star](https://github.com/ws614054446/AndroidUI)
 
 
 

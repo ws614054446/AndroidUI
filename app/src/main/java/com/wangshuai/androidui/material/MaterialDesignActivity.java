@@ -28,6 +28,14 @@ public class MaterialDesignActivity extends AppCompatActivity implements View.On
         btnTablayout.setOnClickListener(this);
         AppCompatButton btnTranslucent = (AppCompatButton) findViewById(R.id.btn_translucent);
         btnTranslucent.setOnClickListener(this);
+        AppCompatButton btnNavigationbar = (AppCompatButton) findViewById(R.id.btn_navigationbar);
+        btnNavigationbar.setOnClickListener(this);
+        AppCompatButton btnCardview = (AppCompatButton) findViewById(R.id.btn_cardview);
+        btnCardview.setOnClickListener(this);
+        AppCompatButton btnFab = (AppCompatButton) findViewById(R.id.btn_fab);
+        btnFab.setOnClickListener(this);
+        AppCompatButton btnCoordinatorlayout = (AppCompatButton) findViewById(R.id.btn_coordinatorlayout);
+        btnCoordinatorlayout.setOnClickListener(this);
     }
 
     @Override
@@ -45,6 +53,16 @@ public class MaterialDesignActivity extends AppCompatActivity implements View.On
             case R.id.btn_translucent://沉浸式状态栏
                 startActivity(new Intent(MaterialDesignActivity.this, TranslucentActivity.class));
                 break;
+            case R.id.btn_cardview://cardview的使用
+                startActivity(new Intent(MaterialDesignActivity.this, CardViewActivity.class));
+                break;
+            case R.id.btn_fab://FloatingActionButton
+                startActivity(new Intent(MaterialDesignActivity.this, FloatingActionButtonActivity.class));
+                break;
+            case R.id.btn_coordinatorlayout://coordinatorlayout
+                startActivity(new Intent(MaterialDesignActivity.this, CoordinatorLayoutActivity.class));
+                break;
+
         }
     }
 }

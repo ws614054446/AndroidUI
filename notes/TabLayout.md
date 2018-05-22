@@ -6,6 +6,11 @@ TabLayout位于design包下，使用时导入design包。
 
 一般这个控件是结合viewpager和fragment使用。[官方文档](https://developer.android.com/reference/android/support/design/widget/TabLayout)
 
+效果图：
+
+![](https://github.com/ws614054446/AndroidUI/blob/master/imgs/tablayout.png)
+
+
 ##### 使用方式一
 代码动态添加tab项
 
@@ -138,3 +143,5 @@ tablayout.setupWithViewPager(viewPager);//必须在 viewPager.setAdapter()之后
             //super.destroyItem(container, position, object);
         }
 ```
+
+[Github示例代码,欢迎star](https://github.com/ws614054446/AndroidUI)

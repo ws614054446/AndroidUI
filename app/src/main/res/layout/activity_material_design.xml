@@ -25,9 +25,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/tablayout"/>
+
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/btn_translucent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/translucent"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_navigationbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/navigationbar"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cardview"/>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_fab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fab"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_coordinatorlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/coordinatorlayout"/>
+
 </LinearLayout>

@@ -21,4 +21,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="navigationbar">NavigationBar</string>
+    <string name="cardview">cardview</string>
+    <string name="fab">FloatingActionButton</string>
+    <string name="coordinatorlayout">CoordinatorLayout</string>
 </resources>
