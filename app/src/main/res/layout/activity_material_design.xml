@@ -54,5 +54,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/coordinatorlayout"/>
-
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/appbarlayout"/>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_collapsingtoolbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/collapsingtoolbarlayout"/>
 </LinearLayout>

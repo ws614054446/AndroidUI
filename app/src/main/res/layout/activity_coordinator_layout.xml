@@ -35,7 +35,8 @@
         app:backgroundTint="?attr/colorPrimary"
         android:elevation="10dp"
         app:fabSize="mini"
-        app:srcCompat="@android:drawable/ic_dialog_email"/>
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        app:layout_behavior="com.wangshuai.androidui.material.FabBehavior2"/>
 
 
 </android.support.design.widget.CoordinatorLayout>

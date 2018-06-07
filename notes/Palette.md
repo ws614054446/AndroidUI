@@ -1,6 +1,6 @@
 ### Material Design系列之Palette详解
 
-[官方文档链接(自备梯子)](https://developer.android.com/reference/android/support/v7/graphics/package-summary)
+[官方文档链接(自备梯子)](https://developer.android.com/reference/android/support/v7/graphics/Palette)
 
 Palette:可以在一张图片里面分析出一些色彩特性：主色调、鲜艳的颜色、柔和颜色等
 

@@ -144,4 +144,4 @@ tablayout.setupWithViewPager(viewPager);//必须在 viewPager.setAdapter()之后
         }
 ```
 
-[Github示例代码,欢迎star](https://github.com/ws614054446/AndroidUI)
+[Github示例代码](https://github.com/ws614054446/AndroidUI)

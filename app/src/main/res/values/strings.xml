@@ -24,5 +24,7 @@
     <string name="navigationbar">NavigationBar</string>
     <string name="cardview">cardview</string>
     <string name="fab">FloatingActionButton</string>
-    <string name="coordinatorlayout">CoordinatorLayout</string>
+    <string name="coordinatorlayout">CoordinatorLayout_FloatingActionButton</string>
+    <string name="appbarlayout">AppBarLayout</string>
+    <string name="collapsingtoolbarlayout">CollapsingToolbarLayout</string>
 </resources>

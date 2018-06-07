@@ -38,8 +38,16 @@
         </activity>
         <activity android:name=".material.FloatingActionButtonActivity">
         </activity>
-        <activity android:name=".material.CoordinatorLayoutActivity"
+        <activity
+            android:name=".material.CoordinatorLayoutActivity"
             android:theme="@style/NoActionBarTheme">
+        </activity>
+        <activity
+            android:name=".material.AppBarLayoutActivity"
+            android:theme="@style/NoActionBarTheme">
+        </activity>
+        <activity android:name=".material.CollapsingToolbarLayoutActivity"
+                  android:theme="@style/NoActionBarTheme">
         </activity>
     </application>
 

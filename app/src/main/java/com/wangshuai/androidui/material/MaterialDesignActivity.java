@@ -36,6 +36,10 @@ public class MaterialDesignActivity extends AppCompatActivity implements View.On
         btnFab.setOnClickListener(this);
         AppCompatButton btnCoordinatorlayout = (AppCompatButton) findViewById(R.id.btn_coordinatorlayout);
         btnCoordinatorlayout.setOnClickListener(this);
+        AppCompatButton btnAppbarlayout = (AppCompatButton) findViewById(R.id.btn_appbarlayout);
+        btnAppbarlayout.setOnClickListener(this);
+        AppCompatButton btnCollapsingtoolbarlayout = (AppCompatButton) findViewById(R.id.btn_collapsingtoolbarlayout);
+        btnCollapsingtoolbarlayout.setOnClickListener(this);
     }
 
     @Override
@@ -61,6 +65,12 @@ public class MaterialDesignActivity extends AppCompatActivity implements View.On
                 break;
             case R.id.btn_coordinatorlayout://coordinatorlayout
                 startActivity(new Intent(MaterialDesignActivity.this, CoordinatorLayoutActivity.class));
+                break;
+            case R.id.btn_appbarlayout://appbarlayout
+                startActivity(new Intent(MaterialDesignActivity.this, AppBarLayoutActivity.class));
+                break;
+            case R.id.btn_collapsingtoolbarlayout://Collapsingtoolbarlayout
+                startActivity(new Intent(MaterialDesignActivity.this, CollapsingToolbarLayoutActivity.class));
                 break;
 
         }
