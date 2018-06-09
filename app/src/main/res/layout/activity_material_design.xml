@@ -1,67 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.v4.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.wangshuai.androidui.material.MaterialDesignActivity">
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_recyclerview"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/recyclerview"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recyclerview"/>
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_palette"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/palette"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_palette"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/palette"/>
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_tablayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/tablayout"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tablayout"/>
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_translucent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/translucent"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_snackbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/snackbar"/>
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_navigationbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/navigationbar"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_textinputlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/textinputlayout"/>
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_cardview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/cardview"/>
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_fab"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/fab"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_translucent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/translucent"/>
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_coordinatorlayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/coordinatorlayout"/>
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_appbarlayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/appbarlayout"/>
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_collapsingtoolbarlayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/collapsingtoolbarlayout"/>
-</LinearLayout>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_navigationbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/navigationbar"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cardview"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_fab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fab"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_coordinatorlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/coordinatorlayout"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_appbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/appbarlayout"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_collapsingtoolbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/collapsingtoolbarlayout"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_bottomnavigationview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bottomnavigationview"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_custombehavior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="custombehavior"/>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,6 +1,7 @@
 package com.wangshuai.androidui.material;
 
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
@@ -26,6 +27,8 @@ public class MaterialDesignActivity extends AppCompatActivity implements View.On
         btnPalette.setOnClickListener(this);
         AppCompatButton btnTablayout = (AppCompatButton) findViewById(R.id.btn_tablayout);
         btnTablayout.setOnClickListener(this);
+        AppCompatButton btnTextInputLayout = (AppCompatButton) findViewById(R.id.btn_textinputlayout);
+        btnTextInputLayout.setOnClickListener(this);
         AppCompatButton btnTranslucent = (AppCompatButton) findViewById(R.id.btn_translucent);
         btnTranslucent.setOnClickListener(this);
         AppCompatButton btnNavigationbar = (AppCompatButton) findViewById(R.id.btn_navigationbar);
@@ -40,6 +43,12 @@ public class MaterialDesignActivity extends AppCompatActivity implements View.On
         btnAppbarlayout.setOnClickListener(this);
         AppCompatButton btnCollapsingtoolbarlayout = (AppCompatButton) findViewById(R.id.btn_collapsingtoolbarlayout);
         btnCollapsingtoolbarlayout.setOnClickListener(this);
+        AppCompatButton btnBottomnavigationview = (AppCompatButton) findViewById(R.id.btn_bottomnavigationview);
+        btnBottomnavigationview.setOnClickListener(this);
+        AppCompatButton btnCustombehavior = (AppCompatButton) findViewById(R.id.btn_custombehavior);
+        btnCustombehavior.setOnClickListener(this);
+        AppCompatButton btnSnackbar = (AppCompatButton) findViewById(R.id.btn_snackbar);
+        btnSnackbar.setOnClickListener(this);
     }
 
     @Override
@@ -53,6 +62,12 @@ public class MaterialDesignActivity extends AppCompatActivity implements View.On
                 break;
             case R.id.btn_tablayout://tablayout
                 startActivity(new Intent(MaterialDesignActivity.this, TabLayoutActivity.class));
+                break;
+            case R.id.btn_snackbar:
+                startActivity(new Intent(MaterialDesignActivity.this, SnackBarActivity.class));
+                break;
+            case R.id.btn_textinputlayout://
+                startActivity(new Intent(MaterialDesignActivity.this, TextInputLayoutActivity.class));
                 break;
             case R.id.btn_translucent://沉浸式状态栏
                 startActivity(new Intent(MaterialDesignActivity.this, TranslucentActivity.class));
@@ -72,7 +87,11 @@ public class MaterialDesignActivity extends AppCompatActivity implements View.On
             case R.id.btn_collapsingtoolbarlayout://Collapsingtoolbarlayout
                 startActivity(new Intent(MaterialDesignActivity.this, CollapsingToolbarLayoutActivity.class));
                 break;
-
+            case R.id.btn_bottomnavigationview://
+                startActivity(new Intent(MaterialDesignActivity.this,BottomNavigationViewActivity.class));
+                break;
+            case R.id.btn_custombehavior://
+                break;
         }
     }
 }

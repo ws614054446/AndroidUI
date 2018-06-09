@@ -1,10 +1,12 @@
 ### Material Design系列之TabLayout详解
 
+[Material Design官方文档Tabs的介绍](https://material.io/design/components/tabs.html#)
+
 TabLayout位于design包下，使用时导入design包。
 
 > compile 'com.android.support:design:26.0.0-alpha1'
 
-一般这个控件是结合viewpager和fragment使用。[官方文档](https://developer.android.com/reference/android/support/design/widget/TabLayout)
+一般这个控件是结合viewpager和fragment使用。[TabLayout官方API文档](https://developer.android.com/reference/android/support/design/widget/TabLayout)
 
 效果图：
 

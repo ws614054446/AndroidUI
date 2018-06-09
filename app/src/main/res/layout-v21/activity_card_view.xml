@@ -14,6 +14,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
         android:layout_margin="16dp"
         android:foreground="?attr/selectableItemBackground"
         android:clickable="true"

@@ -27,4 +27,7 @@
     <string name="coordinatorlayout">CoordinatorLayout_FloatingActionButton</string>
     <string name="appbarlayout">AppBarLayout</string>
     <string name="collapsingtoolbarlayout">CollapsingToolbarLayout</string>
+    <string name="bottomnavigationview">BottomNavigationView</string>
+    <string name="textinputlayout">TextInputLayout</string>
+    <string name="snackbar">SnackBar</string>
 </resources>

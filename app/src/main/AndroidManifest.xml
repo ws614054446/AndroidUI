@@ -46,8 +46,13 @@
             android:name=".material.AppBarLayoutActivity"
             android:theme="@style/NoActionBarTheme">
         </activity>
-        <activity android:name=".material.CollapsingToolbarLayoutActivity"
-                  android:theme="@style/NoActionBarTheme">
+        <activity
+            android:name=".material.CollapsingToolbarLayoutActivity"
+            android:theme="@style/NoActionBarTheme">
+        </activity>
+        <activity android:name=".material.BottomNavigationViewActivity">
+        </activity>
+        <activity android:name=".material.TextInputLayoutActivity">
         </activity>
     </application>
 

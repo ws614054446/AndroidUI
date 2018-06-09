@@ -44,8 +44,8 @@ app:contentPadding:设置内容的padding
 
 > Due to expensive nature of rounded corner clipping, on platforms before L, CardView does not clip its children that intersect with rounded corners. Instead, it adds padding to avoid such intersection (See setPreventCornerOverlap(boolean) to change this behavior).
 
-边框圆角在5.0以上才会有效果，5.0以下就不能变成圆角，需要自己去实现，没有兼容的API可调用。
-在API 21版本之前，CardView不会裁剪内容元素以满足圆角需求，而是使用添加padding的替代方案，从而使内容元素不会覆盖CardView的圆角。而控制这个行为的属性就是cardPreventCornerOverlap，默认值为true。
+内容边框圆角在5.0以上才会有效果，5.0以下里面包裹的布局就不能变成圆角，比如cardview里面是一张图片，5.0及以上图片会随着cardview有圆角，5.0以下的图片还是没有圆角。需要自己去实现，没有兼容的API可调用。
+在API 21版本之前，CardView不会裁剪内容元素以满足圆角需求，而是使用添加padding的替代方案（app:contentPadding），从而使内容元素不会覆盖CardView的圆角。而控制这个行为的属性就是cardPreventCornerOverlap，默认值为true。
 
 2、阴影效果
 > CardView uses elevation property on L for shadows and falls back to a custom shadow implementation on older platforms.

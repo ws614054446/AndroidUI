@@ -28,20 +28,18 @@ public class CollapsingToolbarLayoutActivity extends AppCompatActivity {
         collapsToolbar = (CollapsingToolbarLayout) findViewById(R.id.collaps_toolbar);
         appBarLayout = (AppBarLayout) findViewById(R.id.appbar_layout);
 
-        collapsToolbar.setTitle("");
+        collapsToolbar.setTitle("啊啊啊");
 
-        toolbar.setNavigationIcon(R.drawable.details_arrow);
-        toolbar.setTitle("");
+        toolbar.setTitle("嘻嘻嘻");
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
                 if(Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()){
                     toolbar.setTitleTextColor(getResources().getColor(R.color.black));
-                    toolbar.setNavigationIcon(R.drawable.details_nav_arrow);
-                    collapsToolbar.setTitle("");
+                    collapsToolbar.setTitle("呵呵哒");
                 }else{
-                    collapsToolbar.setTitle("");
-                    toolbar.setTitle("");
+                    collapsToolbar.setTitle("么么哒");
+                    toolbar.setTitle("哈哈哈");
                 }
             }
         });
