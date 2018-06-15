@@ -21,8 +21,6 @@ public class MaterialDesignActivity extends AppCompatActivity implements View.On
     }
 
     private void initViews() {
-        AppCompatButton btnRecyclerView = (AppCompatButton) findViewById(R.id.btn_recyclerview);
-        btnRecyclerView.setOnClickListener(this);
         AppCompatButton btnPalette = (AppCompatButton) findViewById(R.id.btn_palette);
         btnPalette.setOnClickListener(this);
         AppCompatButton btnTablayout = (AppCompatButton) findViewById(R.id.btn_tablayout);
@@ -54,9 +52,6 @@ public class MaterialDesignActivity extends AppCompatActivity implements View.On
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btn_recyclerview://recyclerview
-                startActivity(new Intent(MaterialDesignActivity.this, RecyclerViewActivity.class));
-                break;
             case R.id.btn_palette://调色板
                 startActivity(new Intent(MaterialDesignActivity.this, PaletteActivity.class));
                 break;

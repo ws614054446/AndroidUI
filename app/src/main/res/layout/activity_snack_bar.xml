@@ -14,4 +14,15 @@
         android:layout_height="wrap_content"
         android:text="点击弹出"/>
 
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_change_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="颜色改变"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_show_from_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="从顶部弹出"/>
 </LinearLayout>

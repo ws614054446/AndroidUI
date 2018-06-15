@@ -16,7 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".material.RecyclerViewActivity"/>
         <activity android:name=".material.MaterialDesignActivity">
         </activity>
         <activity android:name=".material.PaletteActivity">

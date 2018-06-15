@@ -153,7 +153,7 @@ private static ViewGroup findSuitableParent(View view) {
 </view>
 ```
 
-由上面的布局可以分析出，snackbar只能从底部弹出。如果需要自定义实现一些自定义效果，例如改变弹出框的底色或则加载不同的弹出界面，则可以从这入手。
+由上面的布局可以分析出，如果需要自定义实现一些自定义效果，例如改变弹出框的底色或则加载不同的弹出界面，则可以从这入手。
 获取到snackbar的布局即SnackbarContentLayout，然后可以根据这两个控件的id来设置一些样式，或者改变这个view的背景。
 
 然后再到这里：
