@@ -19,7 +19,7 @@ package com.wangshuai.androidui.material.mysnackbar;
 import android.content.Context;
 import android.content.res.TypedArray;
 
-class ThemeUtils {
+class MyThemeUtils {
 
     private static final int[] APPCOMPAT_CHECK_ATTRS = {
             android.support.v7.appcompat.R.attr.colorPrimary

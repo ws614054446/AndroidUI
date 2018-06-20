@@ -18,8 +18,6 @@ package com.wangshuai.androidui.material.mysnackbar;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.annotation.RestrictTo;
-import android.support.design.R;
-import com.wangshuai.androidui.material.mysnackbar.BaseTransientBottomBar;
 import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.view.View;
@@ -27,25 +25,27 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.wangshuai.androidui.R;
+
 import static android.support.annotation.RestrictTo.Scope.LIBRARY_GROUP;
 
 /**
  * @hide
  */
 @RestrictTo(LIBRARY_GROUP)
-public class SnackbarContentLayout extends LinearLayout implements
-        BaseTransientBottomBar.ContentViewCallback {
+public class MySnackbarContentLayout extends LinearLayout implements
+        MyBaseTransientBottomBar.ContentViewCallback {
     private TextView mMessageView;
     private Button mActionView;
 
     private int mMaxWidth;
     private int mMaxInlineActionWidth;
 
-    public SnackbarContentLayout(Context context) {
+    public MySnackbarContentLayout(Context context) {
         this(context, null);
     }
 
-    public SnackbarContentLayout(Context context, AttributeSet attrs) {
+    public MySnackbarContentLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SnackbarLayout);
         mMaxWidth = a.getDimensionPixelSize(R.styleable.SnackbarLayout_android_maxWidth, -1);

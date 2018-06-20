@@ -30,4 +30,6 @@
     <string name="bottomnavigationview">BottomNavigationView</string>
     <string name="textinputlayout">TextInputLayout</string>
     <string name="snackbar">SnackBar</string>
+    <string name="navigationview">NavigationView</string>
+    <string name="bottomsheet">BottomSheet</string>
 </resources>

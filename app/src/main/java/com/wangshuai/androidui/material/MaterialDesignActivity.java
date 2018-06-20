@@ -43,10 +43,14 @@ public class MaterialDesignActivity extends AppCompatActivity implements View.On
         btnCollapsingtoolbarlayout.setOnClickListener(this);
         AppCompatButton btnBottomnavigationview = (AppCompatButton) findViewById(R.id.btn_bottomnavigationview);
         btnBottomnavigationview.setOnClickListener(this);
+        AppCompatButton btnNavigationview = (AppCompatButton) findViewById(R.id.btn_navigationview);
+        btnNavigationview.setOnClickListener(this);
         AppCompatButton btnCustombehavior = (AppCompatButton) findViewById(R.id.btn_custombehavior);
         btnCustombehavior.setOnClickListener(this);
         AppCompatButton btnSnackbar = (AppCompatButton) findViewById(R.id.btn_snackbar);
         btnSnackbar.setOnClickListener(this);
+        AppCompatButton btnBottomsheet = (AppCompatButton) findViewById(R.id.btn_bottomsheet);
+        btnBottomsheet.setOnClickListener(this);
     }
 
     @Override
@@ -84,6 +88,12 @@ public class MaterialDesignActivity extends AppCompatActivity implements View.On
                 break;
             case R.id.btn_bottomnavigationview://
                 startActivity(new Intent(MaterialDesignActivity.this,BottomNavigationViewActivity.class));
+                break;
+            case R.id.btn_navigationview:
+                startActivity(new Intent(MaterialDesignActivity.this,DrawLayoutActivity.class));
+                break;
+            case R.id.btn_bottomsheet://
+                startActivity(new Intent(MaterialDesignActivity.this,BottomSheetActivity.class));
                 break;
             case R.id.btn_custombehavior://
                 break;

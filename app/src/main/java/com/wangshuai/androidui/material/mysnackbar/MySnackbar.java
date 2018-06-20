@@ -23,8 +23,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RestrictTo;
 import android.support.annotation.StringRes;
-import android.support.design.R;
-import com.wangshuai.androidui.material.mysnackbar.SnackbarContentLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.text.TextUtils;
@@ -35,6 +33,8 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+
+import com.wangshuai.androidui.R;
 
 import static android.support.annotation.RestrictTo.Scope.LIBRARY_GROUP;
 
@@ -51,9 +51,9 @@ import static android.support.annotation.RestrictTo.Scope.LIBRARY_GROUP;
  * {@link #setAction(CharSequence, View.OnClickListener)}.
  * <p>
  * To be notified when a snackbar has been shown or dismissed, you can provide a {@link Callback}
- * via {@link BaseTransientBottomBar#addCallback(BaseCallback)}.</p>
+ * via {@link MyBaseTransientBottomBar#addCallback(BaseCallback)}.</p>
  */
-public final class MySnackbar extends BaseTransientBottomBar<MySnackbar> {
+public final class MySnackbar extends MyBaseTransientBottomBar<MySnackbar> {
 
     /**
      * Show the MySnackbar indefinitely. This means that the MySnackbar will be displayed from the time
@@ -61,29 +61,29 @@ public final class MySnackbar extends BaseTransientBottomBar<MySnackbar> {
      *
      * @see #setDuration
      */
-    public static final int LENGTH_INDEFINITE = BaseTransientBottomBar.LENGTH_INDEFINITE;
+    public static final int LENGTH_INDEFINITE = MyBaseTransientBottomBar.LENGTH_INDEFINITE;
 
     /**
      * Show the MySnackbar for a short period of time.
      *
      * @see #setDuration
      */
-    public static final int LENGTH_SHORT = BaseTransientBottomBar.LENGTH_SHORT;
+    public static final int LENGTH_SHORT = MyBaseTransientBottomBar.LENGTH_SHORT;
 
     /**
      * Show the MySnackbar for a long period of time.
      *
      * @see #setDuration
      */
-    public static final int LENGTH_LONG = BaseTransientBottomBar.LENGTH_LONG;
+    public static final int LENGTH_LONG = MyBaseTransientBottomBar.LENGTH_LONG;
 
     /**
      * Callback class for {@link MySnackbar} instances.
      *
      * Note: this class is here to provide backwards-compatible way for apps written before
-     * the existence of the base {@link BaseTransientBottomBar} class.
+     * the existence of the base {@link MyBaseTransientBottomBar} class.
      *
-     * @see BaseTransientBottomBar#addCallback(BaseCallback)
+     * @see MyBaseTransientBottomBar#addCallback(BaseCallback)
      */
     public static class Callback extends BaseCallback<MySnackbar> {
         /** Indicates that the MySnackbar was dismissed via a swipe.*/
@@ -141,8 +141,8 @@ public final class MySnackbar extends BaseTransientBottomBar<MySnackbar> {
         }
 
         final LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        final SnackbarContentLayout content =
-                (SnackbarContentLayout) inflater.inflate(R.layout.design_layout_snackbar_include, parent, false);
+        final MySnackbarContentLayout content =
+                (MySnackbarContentLayout) inflater.inflate(R.layout.my_design_layout_snackbar_include, parent, false);
         final MySnackbar snackbar = new MySnackbar(parent, content, content);
         snackbar.setText(text);
         snackbar.setDuration(duration);
@@ -202,11 +202,11 @@ public final class MySnackbar extends BaseTransientBottomBar<MySnackbar> {
     /**
      * Update the text in this {@link MySnackbar}.
      *
-     * @param message The new text for this {@link BaseTransientBottomBar}.
+     * @param message The new text for this {@link MyBaseTransientBottomBar}.
      */
     @NonNull
     public MySnackbar setText(@NonNull CharSequence message) {
-        final SnackbarContentLayout contentLayout = (SnackbarContentLayout) mView.getChildAt(0);
+        final MySnackbarContentLayout contentLayout = (MySnackbarContentLayout) mView.getChildAt(0);
         final TextView tv = contentLayout.getMessageView();
         tv.setText(message);
         return this;
@@ -215,7 +215,7 @@ public final class MySnackbar extends BaseTransientBottomBar<MySnackbar> {
     /**
      * Update the text in this {@link MySnackbar}.
      *
-     * @param resId The new text for this {@link BaseTransientBottomBar}.
+     * @param resId The new text for this {@link MyBaseTransientBottomBar}.
      */
     @NonNull
     public MySnackbar setText(@StringRes int resId) {
@@ -223,7 +223,7 @@ public final class MySnackbar extends BaseTransientBottomBar<MySnackbar> {
     }
 
     /**
-     * Set the action to be displayed in this {@link BaseTransientBottomBar}.
+     * Set the action to be displayed in this {@link MyBaseTransientBottomBar}.
      *
      * @param resId    String resource to display for the action
      * @param listener callback to be invoked when the action is clicked
@@ -234,14 +234,14 @@ public final class MySnackbar extends BaseTransientBottomBar<MySnackbar> {
     }
 
     /**
-     * Set the action to be displayed in this {@link BaseTransientBottomBar}.
+     * Set the action to be displayed in this {@link MyBaseTransientBottomBar}.
      *
      * @param text     Text to display for the action
      * @param listener callback to be invoked when the action is clicked
      */
     @NonNull
     public MySnackbar setAction(CharSequence text, final View.OnClickListener listener) {
-        final SnackbarContentLayout contentLayout = (SnackbarContentLayout) mView.getChildAt(0);
+        final MySnackbarContentLayout contentLayout = (MySnackbarContentLayout) mView.getChildAt(0);
         final TextView tv = contentLayout.getActionView();
 
         if (TextUtils.isEmpty(text) || listener == null) {
@@ -268,7 +268,7 @@ public final class MySnackbar extends BaseTransientBottomBar<MySnackbar> {
      */
     @NonNull
     public MySnackbar setActionTextColor(ColorStateList colors) {
-        final SnackbarContentLayout contentLayout = (SnackbarContentLayout) mView.getChildAt(0);
+        final MySnackbarContentLayout contentLayout = (MySnackbarContentLayout) mView.getChildAt(0);
         final TextView tv = contentLayout.getActionView();
         tv.setTextColor(colors);
         return this;
@@ -280,7 +280,7 @@ public final class MySnackbar extends BaseTransientBottomBar<MySnackbar> {
      */
     @NonNull
     public MySnackbar setActionTextColor(@ColorInt int color) {
-        final SnackbarContentLayout contentLayout = (SnackbarContentLayout) mView.getChildAt(0);
+        final MySnackbarContentLayout contentLayout = (MySnackbarContentLayout) mView.getChildAt(0);
         final TextView tv = contentLayout.getActionView();
         tv.setTextColor(color);
         return this;
@@ -319,10 +319,10 @@ public final class MySnackbar extends BaseTransientBottomBar<MySnackbar> {
      * @hide
      *
      * Note: this class is here to provide backwards-compatible way for apps written before
-     * the existence of the base {@link BaseTransientBottomBar} class.
+     * the existence of the base {@link MyBaseTransientBottomBar} class.
      */
     @RestrictTo(LIBRARY_GROUP)
-    public static final class SnackbarLayout extends BaseTransientBottomBar.SnackbarBaseLayout {
+    public static final class SnackbarLayout extends MyBaseTransientBottomBar.SnackbarBaseLayout {
         public SnackbarLayout(Context context) {
             super(context);
         }

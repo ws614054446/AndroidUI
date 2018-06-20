@@ -31,7 +31,6 @@ import android.support.annotation.IntDef;
 import android.support.annotation.IntRange;
 import android.support.annotation.NonNull;
 import android.support.annotation.RestrictTo;
-import android.support.design.R;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.SwipeDismissBehavior;
 import android.support.v4.view.ViewCompat;
@@ -50,13 +49,15 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 
+import com.wangshuai.androidui.R;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 import java.util.List;
 
 import static android.support.annotation.RestrictTo.Scope.LIBRARY_GROUP;
-import static com.wangshuai.androidui.material.mysnackbar.AnimationUtils.FAST_OUT_SLOW_IN_INTERPOLATOR;
+import static com.wangshuai.androidui.material.mysnackbar.MyAnimationUtils.FAST_OUT_SLOW_IN_INTERPOLATOR;
 
 /**
  * Base class for lightweight transient bars that are displayed along the bottom edge of the
@@ -64,12 +65,12 @@ import static com.wangshuai.androidui.material.mysnackbar.AnimationUtils.FAST_OU
  *
  * @param <B> The transient bottom bar subclass.
  */
-public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>> {
+public abstract class MyBaseTransientBottomBar<B extends MyBaseTransientBottomBar<B>> {
     /**
-     * Base class for {@link BaseTransientBottomBar} callbacks.
+     * Base class for {@link MyBaseTransientBottomBar} callbacks.
      *
      * @param <B> The transient bottom bar subclass.
-     * @see BaseTransientBottomBar#addCallback(BaseCallback)
+     * @see MyBaseTransientBottomBar#addCallback(BaseCallback)
      */
     public abstract static class BaseCallback<B> {
         /** Indicates that the MySnackbar was dismissed via a swipe.*/
@@ -91,7 +92,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         public @interface DismissEvent {}
 
         /**
-         * Called when the given {@link BaseTransientBottomBar} has been dismissed, either
+         * Called when the given {@link MyBaseTransientBottomBar} has been dismissed, either
          * through a time-out, having been manually dismissed, or an action being clicked.
          *
          * @param transientBottomBar The transient bottom bar which has been dismissed.
@@ -100,17 +101,17 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
          *              {@link #DISMISS_EVENT_TIMEOUT}, {@link #DISMISS_EVENT_MANUAL} or
          *              {@link #DISMISS_EVENT_CONSECUTIVE}.
          *
-         * @see BaseTransientBottomBar#dismiss()
+         * @see MyBaseTransientBottomBar#dismiss()
          */
         public void onDismissed(B transientBottomBar, @DismissEvent int event) {
             // empty
         }
 
         /**
-         * Called when the given {@link BaseTransientBottomBar} is visible.
+         * Called when the given {@link MyBaseTransientBottomBar} is visible.
          *
          * @param transientBottomBar The transient bottom bar which is now visible.
-         * @see BaseTransientBottomBar#show()
+         * @see MyBaseTransientBottomBar#show()
          */
         public void onShown(B transientBottomBar) {
             // empty
@@ -188,10 +189,10 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
             public boolean handleMessage(Message message) {
                 switch (message.what) {
                     case MSG_SHOW:
-                        ((BaseTransientBottomBar) message.obj).showView();
+                        ((MyBaseTransientBottomBar) message.obj).showView();
                         return true;
                     case MSG_DISMISS:
-                        ((BaseTransientBottomBar) message.obj).hideView(message.arg1);
+                        ((MyBaseTransientBottomBar) message.obj).hideView(message.arg1);
                         return true;
                 }
                 return false;
@@ -233,8 +234,8 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
      * @param content The content view for this transient bottom bar.
      * @param contentViewCallback The content view callback for this transient bottom bar.
      */
-    protected BaseTransientBottomBar(@NonNull ViewGroup parent, @NonNull View content,
-                                     @NonNull ContentViewCallback contentViewCallback) {
+    protected MyBaseTransientBottomBar(@NonNull ViewGroup parent, @NonNull View content,
+                                       @NonNull ContentViewCallback contentViewCallback) {
         if (parent == null) {
             throw new IllegalArgumentException("Transient bottom bar must have non-null parent");
         }
@@ -249,13 +250,13 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         mContentViewCallback = contentViewCallback;
         mContext = parent.getContext();
 
-        ThemeUtils.checkAppCompatTheme(mContext);
+        MyThemeUtils.checkAppCompatTheme(mContext);
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
         // Note that for backwards compatibility reasons we inflate a layout that is defined
         // in the extending MySnackbar class. This is to prevent breakage of apps that have custom
         // coordinator layout behaviors that depend on that layout.
-        mView = (SnackbarBaseLayout) inflater.inflate(R.layout.design_layout_snackbar, mTargetParent, false);
+        mView = (SnackbarBaseLayout) inflater.inflate(R.layout.my_design_layout_snackbar, mTargetParent, false);
         mView.addView(content);
 
         ViewCompat.setAccessibilityLiveRegion(mView,
@@ -306,7 +307,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
     }
 
     /**
-     * Returns the {@link BaseTransientBottomBar}'s context.
+     * Returns the {@link MyBaseTransientBottomBar}'s context.
      */
     @NonNull
     public Context getContext() {
@@ -314,7 +315,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
     }
 
     /**
-     * Returns the {@link BaseTransientBottomBar}'s view.
+     * Returns the {@link MyBaseTransientBottomBar}'s view.
      */
     @NonNull
     public View getView() {
@@ -322,21 +323,21 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
     }
 
     /**
-     * Show the {@link BaseTransientBottomBar}.
+     * Show the {@link MyBaseTransientBottomBar}.
      */
     public void show() {
-        SnackbarManager.getInstance().show(mDuration, mManagerCallback);
+        MySnackbarManager.getInstance().show(mDuration, mManagerCallback);
     }
 
     /**
-     * Dismiss the {@link BaseTransientBottomBar}.
+     * Dismiss the {@link MyBaseTransientBottomBar}.
      */
     public void dismiss() {
         dispatchDismiss(BaseCallback.DISMISS_EVENT_MANUAL);
     }
 
     void dispatchDismiss(@BaseCallback.DismissEvent int event) {
-        SnackbarManager.getInstance().dismiss(mManagerCallback, event);
+        MySnackbarManager.getInstance().dismiss(mManagerCallback, event);
     }
 
     /**
@@ -379,30 +380,30 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
     }
 
     /**
-     * Return whether this {@link BaseTransientBottomBar} is currently being shown.
+     * Return whether this {@link MyBaseTransientBottomBar} is currently being shown.
      */
     public boolean isShown() {
-        return SnackbarManager.getInstance().isCurrent(mManagerCallback);
+        return MySnackbarManager.getInstance().isCurrent(mManagerCallback);
     }
 
     /**
-     * Returns whether this {@link BaseTransientBottomBar} is currently being shown, or is queued
+     * Returns whether this {@link MyBaseTransientBottomBar} is currently being shown, or is queued
      * to be shown next.
      */
     public boolean isShownOrQueued() {
-        return SnackbarManager.getInstance().isCurrentOrNext(mManagerCallback);
+        return MySnackbarManager.getInstance().isCurrentOrNext(mManagerCallback);
     }
 
-    final SnackbarManager.Callback mManagerCallback = new SnackbarManager.Callback() {
+    final MySnackbarManager.Callback mManagerCallback = new MySnackbarManager.Callback() {
         @Override
         public void show() {
-            sHandler.sendMessage(sHandler.obtainMessage(MSG_SHOW, BaseTransientBottomBar.this));
+            sHandler.sendMessage(sHandler.obtainMessage(MSG_SHOW, MyBaseTransientBottomBar.this));
         }
 
         @Override
         public void dismiss(int event) {
             sHandler.sendMessage(sHandler.obtainMessage(MSG_DISMISS, event, 0,
-                    BaseTransientBottomBar.this));
+                    MyBaseTransientBottomBar.this));
         }
     };
 
@@ -431,11 +432,11 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
                             case SwipeDismissBehavior.STATE_DRAGGING:
                             case SwipeDismissBehavior.STATE_SETTLING:
                                 // If the view is being dragged or settling, pause the timeout
-                                SnackbarManager.getInstance().pauseTimeout(mManagerCallback);
+                                MySnackbarManager.getInstance().pauseTimeout(mManagerCallback);
                                 break;
                             case SwipeDismissBehavior.STATE_IDLE:
                                 // If the view has been released and is idle, restore the timeout
-                                SnackbarManager.getInstance()
+                                MySnackbarManager.getInstance()
                                         .restoreTimeoutIfPaused(mManagerCallback);
                                 break;
                         }
@@ -450,7 +451,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
 
         mView.setOnAttachStateChangeListener(
-                new BaseTransientBottomBar.OnAttachStateChangeListener() {
+                new MyBaseTransientBottomBar.OnAttachStateChangeListener() {
                 @Override
                 public void onViewAttachedToWindow(View v) {}
 
@@ -481,7 +482,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
             }
         } else {
             // Otherwise, add one of our layout change listeners and show it in when laid out
-            mView.setOnLayoutChangeListener(new BaseTransientBottomBar.OnLayoutChangeListener() {
+            mView.setOnLayoutChangeListener(new MyBaseTransientBottomBar.OnLayoutChangeListener() {
                 @Override
                 public void onLayoutChange(View view, int left, int top, int right, int bottom) {
                     mView.setOnLayoutChangeListener(null);
@@ -676,7 +677,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
     }
 
     void onViewShown() {
-        SnackbarManager.getInstance().onShown(mManagerCallback);
+        MySnackbarManager.getInstance().onShown(mManagerCallback);
         if (mCallbacks != null) {
             // Notify the callbacks. Do that from the end of the list so that if a callback
             // removes itself as the result of being called, it won't mess up with our iteration
@@ -688,8 +689,8 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
     }
 
     void onViewHidden(int event) {
-        // First tell the SnackbarManager that it has been dismissed
-        SnackbarManager.getInstance().onDismissed(mManagerCallback);
+        // First tell the MySnackbarManager that it has been dismissed
+        MySnackbarManager.getInstance().onDismissed(mManagerCallback);
         if (mCallbacks != null) {
             // Notify the callbacks. Do that from the end of the list so that if a callback
             // removes itself as the result of being called, it won't mess up with our iteration
@@ -725,8 +726,8 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
      */
     @RestrictTo(LIBRARY_GROUP)
     static class SnackbarBaseLayout extends FrameLayout {
-        private BaseTransientBottomBar.OnLayoutChangeListener mOnLayoutChangeListener;
-        private BaseTransientBottomBar.OnAttachStateChangeListener mOnAttachStateChangeListener;
+        private MyBaseTransientBottomBar.OnLayoutChangeListener mOnLayoutChangeListener;
+        private MyBaseTransientBottomBar.OnAttachStateChangeListener mOnAttachStateChangeListener;
 
         SnackbarBaseLayout(Context context) {
             this(context, null);
@@ -771,12 +772,12 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
 
         void setOnLayoutChangeListener(
-                BaseTransientBottomBar.OnLayoutChangeListener onLayoutChangeListener) {
+                MyBaseTransientBottomBar.OnLayoutChangeListener onLayoutChangeListener) {
             mOnLayoutChangeListener = onLayoutChangeListener;
         }
 
         void setOnAttachStateChangeListener(
-                BaseTransientBottomBar.OnAttachStateChangeListener listener) {
+                MyBaseTransientBottomBar.OnAttachStateChangeListener listener) {
             mOnAttachStateChangeListener = listener;
         }
     }
@@ -796,12 +797,12 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
                     // currently touching the MySnackbar. We restore the timeout when complete
                     if (parent.isPointInChildBounds(child, (int) event.getX(),
                             (int) event.getY())) {
-                        SnackbarManager.getInstance().pauseTimeout(mManagerCallback);
+                        MySnackbarManager.getInstance().pauseTimeout(mManagerCallback);
                     }
                     break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:
-                    SnackbarManager.getInstance().restoreTimeoutIfPaused(mManagerCallback);
+                    MySnackbarManager.getInstance().restoreTimeoutIfPaused(mManagerCallback);
                     break;
             }
             return super.onInterceptTouchEvent(parent, child, event);

@@ -80,6 +80,16 @@
             android:layout_height="wrap_content"
             android:text="@string/bottomnavigationview"/>
         <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_navigationview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/navigationview"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_bottomsheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bottomsheet"/>
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_custombehavior"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_expand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Expand_BottomSheet"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_collapsed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Collapsed_BottomSheet"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_hide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hide_BottomSheet"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_bottomsheet_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BottomSheetDialog"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_bottomsheet_dialog_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BottomSheetDialogFragment"/>
+</LinearLayout>

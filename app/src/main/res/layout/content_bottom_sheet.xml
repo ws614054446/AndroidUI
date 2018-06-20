@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/ll_content_bottom_sheet"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              app:behavior_hideable="true"
+              app:layout_behavior="@string/bottom_sheet_behavior"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="人生若只如初见，何事秋风悲画扇。"
+        android:textSize="20sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="等闲变却故人心，却道故人心易变。"
+        android:textSize="20sp"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="骊山语罢清宵半，泪雨霖铃终不怨。"
+        android:textSize="20sp"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="何如薄幸锦衣郎，比翼连枝当日愿。"
+        android:textSize="20sp"
+        android:gravity="center"/>
+
+</LinearLayout>

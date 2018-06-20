@@ -24,7 +24,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 
-class AnimationUtils {
+class MyAnimationUtils {
 
     static final Interpolator LINEAR_INTERPOLATOR = new LinearInterpolator();
     static final Interpolator FAST_OUT_SLOW_IN_INTERPOLATOR = new FastOutSlowInInterpolator();

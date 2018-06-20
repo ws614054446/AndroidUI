@@ -1,17 +1,14 @@
 package com.wangshuai.androidui.material;
 
 import android.graphics.Color;
-import android.support.design.internal.SnackbarContentLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
 import android.view.View;
-import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
 import com.wangshuai.androidui.R;
-import com.wangshuai.androidui.material.mysnackbar.BaseTransientBottomBar;
 import com.wangshuai.androidui.material.mysnackbar.MySnackbar;
 
 public class SnackBarActivity extends AppCompatActivity implements View.OnClickListener {
