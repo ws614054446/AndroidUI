@@ -55,6 +55,8 @@
         </activity>
         <activity android:name=".material.BottomSheetActivity">
         </activity>
+        <activity android:name=".material.CustomBehaviorActivity">
+        </activity>
     </application>
 
 </manifest>

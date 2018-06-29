@@ -111,8 +111,11 @@ public class BottomSheetActivity extends AppCompatActivity implements View.OnCli
                 dialog.show();
                 break;
             case R.id.btn_bottomsheet_dialog_fragment://fragment
-                CustomFragmentDialog fragmentDialog = new CustomFragmentDialog();
-                fragmentDialog.show(getSupportFragmentManager(),"CustomFragmentDialog");
+//                CustomFragmentDialog fragmentDialog = new CustomFragmentDialog();
+//                fragmentDialog.show(getSupportFragmentManager(),"CustomFragmentDialog");
+
+                FullSheetDialogFragment fullSheetDialogFragment = new FullSheetDialogFragment();
+                fullSheetDialogFragment.show(getSupportFragmentManager(),"FullSheetDialogFragment");
                 break;
         }
     }
