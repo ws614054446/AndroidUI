@@ -6,3 +6,17 @@
 - [TabLayout](https://blog.csdn.net/ws614054446/article/details/80656433)
 - [CardView](https://blog.csdn.net/ws614054446/article/details/80613839)
 - [Palette](https://blog.csdn.net/ws614054446/article/details/80548603)
+- [TextInputLayout](https://blog.csdn.net/ws614054446/article/details/80860431)
+- [CoordinatorLayout](https://blog.csdn.net/ws614054446/article/details/80833594)
+- [BottomSheet](https://blog.csdn.net/ws614054446/article/details/80819491)
+- [NavigationView](https://blog.csdn.net/ws614054446/article/details/80818678)
+- [BottomNavigationView](https://blog.csdn.net/ws614054446/article/details/80805765)
+- [沉浸式状态栏](https://blog.csdn.net/ws614054446/article/details/80777262)
+- [SnackBar](https://blog.csdn.net/ws614054446/article/details/80765147)
+
+#### 动画系列
+
+- [帧动画详解](https://blog.csdn.net/ws614054446/article/details/81120796)
+- [补间动画详解](https://blog.csdn.net/ws614054446/article/details/81289251)
+- [属性动画](https://blog.csdn.net/ws614054446/article/details/81289377)
+- [插值器（Interpolator）和估值器（TypeEvaluator）详解](https://blog.csdn.net/ws614054446/article/details/81289176)
