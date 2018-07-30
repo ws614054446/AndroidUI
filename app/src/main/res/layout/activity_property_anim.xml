@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wangshuai.androidui.anim.PropertyAnimActivity">
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn1"
+        android:layout_width="300px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="ValueAnimator"/>
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/frame02"
+        android:layout_gravity="center_horizontal"/>
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn2"
+        android:layout_width="300px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="AnimatorSet"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_add_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加View"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_remove_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="移除view"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="按钮1"
+            android:visibility="gone"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="按钮2"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_state_list_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="StateListAnimator"
+        android:layout_gravity="center_horizontal"
+        android:stateListAnimator="@animator/selector_animate_scale"/>
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_view_property"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ViewPropertyAnimator"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

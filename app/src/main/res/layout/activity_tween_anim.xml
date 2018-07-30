@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wangshuai.androidui.anim.TweenAnimActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_anim"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitCenter"
+        android:src="@drawable/frame01"/>
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_translate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="平移(Translate)"/>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_scale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="缩放(Scale)"/>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_rotate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="旋转(Rotate)"/>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_alpha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="透明度(Alpha)"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="动画集(Set)"/>
+</LinearLayout>

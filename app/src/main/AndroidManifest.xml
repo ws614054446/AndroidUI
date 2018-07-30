@@ -57,6 +57,18 @@
         </activity>
         <activity android:name=".material.CustomBehaviorActivity">
         </activity>
+        <activity android:name=".anim.AnimActivity">
+        </activity>
+        <activity android:name=".anim.FrameAnimActivity">
+        </activity>
+        <activity android:name=".anim.TweenAnimActivity">
+        </activity>
+        <activity android:name=".anim.PropertyAnimActivity">
+        </activity>
+        <activity android:name=".anim.InterpolatorActivity">
+        </activity>
+        <activity android:name=".anim.EvaluatorActivity">
+        </activity>
     </application>
 
 </manifest>

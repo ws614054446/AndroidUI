@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wangshuai.androidui.anim.AnimActivity">
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_frame_anim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="逐帧动画"/>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_tween_anim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="补间动画"/>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_property_anim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="属性动画"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_interpolator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="插值器"/>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_TypeEvaluator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="估值器"/>
+</LinearLayout>

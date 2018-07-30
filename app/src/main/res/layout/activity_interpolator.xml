@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wangshuai.androidui.anim.InterpolatorActivity">
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_interpolator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Interpolator"/>
+
+
+    <TextView
+        android:id="@+id/tv_accelerate_decelerate_interpolator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="AccelerateDecelerateInterpolator"/>
+
+    <TextView
+        android:id="@+id/tv_accelerate_interpolator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="AccelerateInterpolator"/>
+    <TextView
+        android:id="@+id/tv_anticipate_interpolator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="AnticipateInterpolator"/>
+    <TextView
+        android:id="@+id/tv_anticipate_overshoot_interpolatorr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="AnticipateOvershootInterpolator"/>
+    <TextView
+        android:id="@+id/tv_bounce_interpolator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="BounceInterpolator"/>
+    <TextView
+        android:id="@+id/tv_cycle_interpolator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="CycleInterpolator"/>
+    <TextView
+        android:id="@+id/tv_decelerate_interpolator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="DecelerateInterpolator"/>
+    <TextView
+        android:id="@+id/tv_linear_interpolator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="LinearInterpolator"/>
+    <TextView
+        android:id="@+id/tv_overshoot_interpolator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="OvershootInterpolator"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_test1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="先减速后加速"/>
+
+</LinearLayout>
